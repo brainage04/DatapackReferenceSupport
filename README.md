@@ -1,19 +1,6 @@
 # About
-My template for Minecraft Fabric server-side mods. The easiest way to use this is to click `Use this template` and GitHub Actions will take care of the rest for you.
+This server-side mod allows datapack JSON files to reference other datapack JSON files, making the creation of complex datapacks such as those that contain procedurally generated structures much easier.
 
-However, if you are using a Linux-based operating system, it is possible to clone this repository, and perform a refactor by triggering the `init.sh` script like so:
-```shell
-./init.sh <owner> <mod_name> 
-```
+For example, processor lists have an added `processor_type` called `reference` that allows a processor list to reference another processor list, instead of having to manually copy-paste the second processor list items into the first processor list. This is much better than the alternative of creating a bunch of Python scripts to essentially do the copy-pasting for you (which is what I did before creating this mod).
 
-Where `<owner>` is your GitHub username and `<mod_name>` is your GitHub repository name/mod name.
-
-This script is designed to work both with GitHub Actions and manual usage, and will safely delete:
-  - Leftover unused folders that are not tracked by Git (src/main/java/com/example and src/main/resources/examplemod).
-  - The `init` workflow and script after successful execution.
-
-# Credits
-Thank you to [nea89o](https://github.com/nea89o)
-for developing the GitHub Actions [workflow](https://github.com/nea89o/Forge1.8.9Template/blob/master/.github/workflows/init.yml)
-and [script](https://github.com/nea89o/Forge1.8.9Template/blob/master/make-my-own.sh)
-from which I based my workflow and script off of.
+Similarly, loot pools have an added optional `additional_pools` field that can either be a string referencing another loot table or a list referencing several other loot tables.
