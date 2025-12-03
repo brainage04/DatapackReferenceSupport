@@ -1,4 +1,4 @@
-package com.example.command;
+package com.github.brainage04.datapackreferencesupport.command;
 
 import com.mojang.brigadier.CommandDispatcher;
 import net.minecraft.server.command.ServerCommandSource;

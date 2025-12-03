@@ -1,8 +1,8 @@
 {
 	"schemaVersion": 1,
-	"id": "examplemod",
+	"id": "datapackreferencesupport",
 	"version": "${version}",
-	"name": "ExampleMod",
+	"name": "DatapackReferenceSupport",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Me!"
@@ -12,15 +12,15 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/examplemod/icon.png",
+	"icon": "assets/datapackreferencesupport/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"com.github.brainage04.datapackreferencesupport.DatapackReferenceSupport"
 		]
 	},
 	"mixins": [
-		"examplemod.mixins.json"
+		"datapackreferencesupport.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.18.1",
